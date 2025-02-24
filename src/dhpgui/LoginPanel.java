@@ -216,10 +216,10 @@ public class LoginPanel extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     
-       Sign_up Sign_upFrame = new Sign_up(); 
-              Sign_upFrame.setVisible(true);
-              Sign_upFrame.pack();
-              Sign_upFrame.setLocationRelativeTo(null);
+       SignUp SignUpFrame = new SignUp(); 
+              SignUpFrame.setVisible(true);
+              SignUpFrame.pack();
+              SignUpFrame.setLocationRelativeTo(null);
               this.dispose();
        
               
