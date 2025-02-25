@@ -5,8 +5,18 @@
  */
 package dhpgui;
 
-import javax.swing.JOptionPane;
+import admin.adminDashboard;
 
+import config.PassWordH;
+import config.Session;
+
+import config.dbConnector;
+import java.security.NoSuchAlgorithmException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+//import register.RegisterF;
+//import user.userDash;
 /**
  *
  * @author ProBook
@@ -19,6 +29,47 @@ public class LoginPanel extends javax.swing.JFrame {
     public LoginPanel() {
         initComponents();
     }
+    public static boolean loginAcc(String username, String password){
+        
+        
+        dbConnector connector = new dbConnector();
+        
+        try{
+            String query = "SELECT * FROM users  WHERE u_username = '" + username + "'";
+            ResultSet resultSet = connector.getData(query);
+           if(resultSet.next()){
+               
+          
+               String hashedPass = resultSet.getString("u_password");
+               String rehashedPass = PassWordH.hashPassword(password);
+               
+             
+               if(hashedPass.equals(rehashedPass)){
+                
+                 Session sess = Session.getInstance();
+                 sess.setUid(resultSet.getInt("u_id"));
+                 sess.setFname(resultSet.getString("u_fname"));
+                 sess.setLname(resultSet.getString("u_lname"));
+                 sess.setEmail(resultSet.getString("u_email"));
+                 sess.setUsername(resultSet.getString("u_username"));
+                 sess.setType(resultSet.getString("u_type"));
+                 sess.setStatus(resultSet.getString("u_status"));
+                 
+                 return true;  
+                 }else{
+                   return false;
+               }
+          
+                 }else{
+                 return false;
+             }
+           }catch (SQLException | NoSuchAlgorithmException ex) {
+            return false;
+        }
+
+    }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,6 +88,7 @@ public class LoginPanel extends javax.swing.JFrame {
         right = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         left = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -66,33 +118,15 @@ public class LoginPanel extends javax.swing.JFrame {
 
         right.setBackground(new java.awt.Color(51, 153, 255));
         right.setPreferredSize(new java.awt.Dimension(400, 500));
+        right.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        right.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 125, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe Script", 1, 22)); // NOI18N
         jLabel8.setText("DIAGNOSIS HISTORY PROFILE");
+        right.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        javax.swing.GroupLayout rightLayout = new javax.swing.GroupLayout(right);
-        right.setLayout(rightLayout);
-        rightLayout.setHorizontalGroup(
-            rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(rightLayout.createSequentialGroup()
-                .addGroup(rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(rightLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel8))
-                    .addGroup(rightLayout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(jLabel7)))
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
-        rightLayout.setVerticalGroup(
-            rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(rightLayout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addContainerGap(231, Short.MAX_VALUE))
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\SCC6\\Desktop\\DHPgui-Destinado-IT2B\\src\\Icon\\icons8-medical-records-100.png")); // NOI18N
+        right.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
 
         jPanel1.add(right);
         right.setBounds(0, 0, 400, 500);
@@ -190,7 +224,7 @@ public class LoginPanel extends javax.swing.JFrame {
         );
 
         jPanel1.add(left);
-        left.setBounds(400, 0, 400, 500);
+        left.setBounds(400, 0, 377, 500);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -274,6 +308,7 @@ public class LoginPanel extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
