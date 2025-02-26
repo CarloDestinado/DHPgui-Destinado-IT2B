@@ -109,22 +109,13 @@ public class CreateUsersF extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        add = new javax.swing.JButton();
-        id = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        del = new javax.swing.JButton();
-        fn = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        up = new javax.swing.JButton();
         ln = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         Email = new javax.swing.JLabel();
-        cl = new javax.swing.JButton();
         mail = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         UserName = new javax.swing.JLabel();
@@ -142,6 +133,21 @@ public class CreateUsersF extends javax.swing.JFrame {
         stat = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         check = new javax.swing.JCheckBox();
+        add = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        id = new javax.swing.JTextField();
+        del = new javax.swing.JButton();
+        up = new javax.swing.JButton();
+        cl = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        fn = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+
+        jPanel2.setBackground(new java.awt.Color(0, 255, 255));
+        jPanel2.setLayout(null);
+
+        jPanel3.setBackground(new java.awt.Color(0, 255, 255));
+        jPanel3.setLayout(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 500));
@@ -151,85 +157,8 @@ public class CreateUsersF extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 255, 255));
-        jPanel2.setLayout(null);
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("User ID");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(140, 0, 44, 30);
-
-        add.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        add.setForeground(new java.awt.Color(255, 0, 0));
-        add.setText("ADD");
-        add.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                addMouseClicked(evt);
-            }
-        });
-        add.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addActionPerformed(evt);
-            }
-        });
-        jPanel2.add(add);
-        add.setBounds(10, 0, 90, 30);
-        jPanel2.add(id);
-        id.setBounds(220, 0, 190, 30);
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 420, 30));
-
-        jPanel3.setBackground(new java.awt.Color(0, 255, 255));
-        jPanel3.setLayout(null);
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("First Name");
-        jPanel3.add(jLabel10);
-        jLabel10.setBounds(140, 0, 63, 30);
-
-        del.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        del.setForeground(new java.awt.Color(255, 51, 51));
-        del.setText("DELETE");
-        del.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                delMouseClicked(evt);
-            }
-        });
-        jPanel3.add(del);
-        del.setBounds(10, 0, 90, 30);
-
-        fn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fnMouseClicked(evt);
-            }
-        });
-        jPanel3.add(fn);
-        fn.setBounds(220, 0, 190, 30);
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 420, 30));
-
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(null);
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Last Name");
-        jPanel4.add(jLabel3);
-        jLabel3.setBounds(140, 0, 63, 30);
-
-        up.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        up.setForeground(new java.awt.Color(0, 0, 255));
-        up.setText("UPDATE");
-        up.setEnabled(false);
-        up.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                upMouseClicked(evt);
-            }
-        });
-        jPanel4.add(up);
-        up.setBounds(10, 0, 90, 30);
 
         ln.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -249,17 +178,6 @@ public class CreateUsersF extends javax.swing.JFrame {
         Email.setText("Email");
         jPanel5.add(Email);
         Email.setBounds(140, 0, 31, 30);
-
-        cl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        cl.setForeground(new java.awt.Color(0, 0, 255));
-        cl.setText("CLEAR");
-        cl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                clMouseClicked(evt);
-            }
-        });
-        jPanel5.add(cl);
-        cl.setBounds(10, 0, 90, 30);
         jPanel5.add(mail);
         mail.setBounds(220, 0, 190, 30);
 
@@ -364,6 +282,75 @@ public class CreateUsersF extends javax.swing.JFrame {
             }
         });
         jPanel1.add(check, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 300, -1, 20));
+
+        add.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        add.setForeground(new java.awt.Color(255, 0, 0));
+        add.setText("ADD");
+        add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addMouseClicked(evt);
+            }
+        });
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 90, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("User ID");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, 30));
+        jPanel1.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 190, 30));
+
+        del.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        del.setForeground(new java.awt.Color(255, 51, 51));
+        del.setText("DELETE");
+        del.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                delMouseClicked(evt);
+            }
+        });
+        jPanel1.add(del, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 90, 30));
+
+        up.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        up.setForeground(new java.awt.Color(0, 0, 255));
+        up.setText("UPDATE");
+        up.setEnabled(false);
+        up.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                upMouseClicked(evt);
+            }
+        });
+        jPanel1.add(up, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 90, 30));
+
+        cl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cl.setForeground(new java.awt.Color(0, 0, 255));
+        cl.setText("CLEAR");
+        cl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                clMouseClicked(evt);
+            }
+        });
+        jPanel1.add(cl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 90, 30));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("First Name");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, -1, 30));
+
+        fn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 190, 30));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Last Name");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, -1, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 510));
 

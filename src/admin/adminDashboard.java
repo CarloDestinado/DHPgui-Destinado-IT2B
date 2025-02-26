@@ -81,7 +81,7 @@ public class adminDashboard extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 2, 14)); // NOI18N
         jLabel1.setText("WELCOME  TO DASHBOARD");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 81, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 32)); // NOI18N
         jLabel5.setText("DIAGNOSIS HEALTH PROFILE");
@@ -176,7 +176,10 @@ public class adminDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        CreateUsersF CreateUsersFFrame = new CreateUsersF(); 
+                      CreateUsersFFrame.setVisible(true);
+                      CreateUsersFFrame.pack();
+                      CreateUsersFFrame.setLocationRelativeTo(null);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

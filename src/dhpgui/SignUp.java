@@ -66,7 +66,7 @@ public class SignUp extends javax.swing.JFrame {
         left.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 139, -1, -1));
 
         user.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        left.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 136, 220, -1));
+        left.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 220, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("First Name ");
@@ -78,28 +78,28 @@ public class SignUp extends javax.swing.JFrame {
                 fnameActionPerformed(evt);
             }
         });
-        left.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 180, 220, -1));
+        left.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Last Name ");
         left.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 227, -1, -1));
 
         lname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        left.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 224, 220, -1));
+        left.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 220, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Email");
         left.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 269, -1, -1));
 
         email.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        left.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 263, 220, -1));
+        left.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 220, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Password");
         left.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 305, -1, -1));
 
         password.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        left.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 302, 200, -1));
+        left.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 200, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setText("Re-Enter Password");
@@ -115,7 +115,7 @@ public class SignUp extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        left.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 418, -1, -1));
+        left.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(51, 153, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -135,7 +135,7 @@ public class SignUp extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        left.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 374, -1, -1));
+        left.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Type of User");
@@ -147,13 +147,11 @@ public class SignUp extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(left, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 83, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(left, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+            .addComponent(left, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
