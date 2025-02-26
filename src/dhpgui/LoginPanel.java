@@ -6,6 +6,7 @@
 package dhpgui;
 
 import admin.adminDashboard;
+import admin.dashboard;
 
 import config.PassWordH;
 import config.Session;
@@ -272,7 +273,38 @@ public class LoginPanel extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String p = new String(pass.getPassword()).trim();
+           String p = new String(pass.getPassword()).trim();
+    String u = user.getText().trim();
+        if(p.isEmpty() || u.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Please Fill All Boxes");
+
+        }
+        if(loginAcc(u.getText(), p.getText())){
+            if(!status.equals("Active")){
+                JOptionPane.showMessageDialog(null, "in active");
+            }else{
+                if(type.equals("Admin")){
+                    JOptionPane.showMessageDialog(null, "login");
+                    dashboard ads = new dashboard();
+                    ads.setVisible(true);
+                    this.dispose();
+                }else if(type.equals("User")){
+                    JOptionPane.showMessageDialog(null, "login");
+                    userDash uds = new userDash();
+                    uds.setVisible(true);
+                    this.dispose();
+               
+                }else{
+                    
+                    JOptionPane.showMessageDialog(null, "No account");
+                }
+            }
+
+        }else{
+            JOptionPane.showMessageDialog(null, "Invalid Account");
+        }
+         String p = new String(pass.getPassword()).trim();
     String u = user.getText().trim();
         if(p.isEmpty() || u.isEmpty())
         {
