@@ -9,6 +9,7 @@ package users;
 import config.PassWordH;
 import config.Session;
 import config.dbConnector;
+import dhpgui.LoginPanel;
 import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -43,22 +44,18 @@ public class ChangeP extends javax.swing.JFrame {
         acc_ln = new javax.swing.JLabel();
         acc_fn = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        oldp = new javax.swing.JTextField();
         newp = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         firmp = new javax.swing.JPasswordField();
-        check = new javax.swing.JCheckBox();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        oldp = new javax.swing.JTextField();
+        check = new javax.swing.JCheckBox();
         idd = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -85,6 +82,11 @@ public class ChangeP extends javax.swing.JFrame {
                 jButton2MouseClicked(evt);
             }
         });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
         acc_ln.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -100,31 +102,14 @@ public class ChangeP extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 140, 370);
 
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 255));
         jLabel4.setText("CONFIRM PASSWORD");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(190, 225, 132, 20);
-
-        oldp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                oldpMouseClicked(evt);
-            }
-        });
-        getContentPane().add(oldp);
-        oldp.setBounds(330, 100, 190, 30);
         getContentPane().add(newp);
-        newp.setBounds(330, 180, 190, 30);
-
-        jPanel3.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("BACK");
-        jPanel3.add(jLabel1);
-        jLabel1.setBounds(10, 0, 60, 20);
-
-        getContentPane().add(jPanel3);
-        jPanel3.setBounds(350, 300, 80, 20);
+        newp.setBounds(330, 180, 200, 30);
 
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -142,8 +127,53 @@ public class ChangeP extends javax.swing.JFrame {
         getContentPane().add(jPanel4);
         jPanel4.setBounds(440, 300, 80, 20);
         getContentPane().add(firmp);
-        firmp.setBounds(330, 220, 190, 30);
+        firmp.setBounds(330, 220, 200, 30);
 
+        jPanel6.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel6.setLayout(null);
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("NEW PASSWORD");
+        jPanel6.add(jLabel6);
+        jLabel6.setBounds(3, 5, 130, 20);
+
+        getContentPane().add(jPanel6);
+        jPanel6.setBounds(180, 180, 350, 30);
+
+        jPanel7.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel7.setLayout(null);
+        getContentPane().add(jPanel7);
+        jPanel7.setBounds(180, 220, 350, 30);
+
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel10.setLayout(null);
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel5.setLayout(null);
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("OLD PASSWORD");
+        jPanel5.add(jLabel3);
+        jLabel3.setBounds(1, 5, 140, 20);
+
+        oldp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                oldpMouseClicked(evt);
+            }
+        });
+        jPanel5.add(oldp);
+        oldp.setBounds(150, 0, 200, 30);
+
+        jPanel10.add(jPanel5);
+        jPanel5.setBounds(10, 50, 350, 30);
+
+        check.setBackground(new java.awt.Color(204, 204, 255));
         check.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         check.setText("show");
         check.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -151,50 +181,9 @@ public class ChangeP extends javax.swing.JFrame {
                 checkMouseClicked(evt);
             }
         });
-        getContentPane().add(check);
-        check.setBounds(470, 260, 59, 20);
+        jPanel10.add(check);
+        check.setBounds(300, 160, 61, 20);
 
-        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel5.setLayout(null);
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("OLD PASSWORD");
-        jPanel5.add(jLabel3);
-        jLabel3.setBounds(1, 5, 140, 20);
-
-        getContentPane().add(jPanel5);
-        jPanel5.setBounds(190, 100, 340, 30);
-
-        jPanel6.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel6.setLayout(null);
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("NEW PASSWORD");
-        jPanel6.add(jLabel6);
-        jLabel6.setBounds(3, 5, 130, 20);
-
-        getContentPane().add(jPanel6);
-        jPanel6.setBounds(190, 180, 340, 30);
-
-        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel7.setLayout(null);
-        getContentPane().add(jPanel7);
-        jPanel7.setBounds(180, 220, 350, 30);
-
-        jPanel8.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel8.setLayout(null);
-        getContentPane().add(jPanel8);
-        jPanel8.setBounds(460, 260, 70, 20);
-
-        jPanel9.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel9.setLayout(null);
-        getContentPane().add(jPanel9);
-        jPanel9.setBounds(340, 300, 190, 20);
-
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel10.setLayout(null);
         getContentPane().add(jPanel10);
         jPanel10.setBounds(170, 90, 380, 250);
 
@@ -204,13 +193,13 @@ public class ChangeP extends javax.swing.JFrame {
         getContentPane().add(idd);
         idd.setBounds(550, 20, 120, 40);
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("CHANGE PASSWORD");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 240, 40));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 340, 40));
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(140, 0, 530, 370);
@@ -285,6 +274,13 @@ public class ChangeP extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_oldpMouseClicked
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+            LoginPanel LoginPanelFrame = new LoginPanel(); 
+                  LoginPanelFrame.setVisible(true);
+                  LoginPanelFrame.pack();
+                  LoginPanelFrame.setLocationRelativeTo(null);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -342,7 +338,6 @@ public class ChangeP extends javax.swing.JFrame {
     private javax.swing.JPasswordField firmp;
     private javax.swing.JLabel idd;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -352,13 +347,10 @@ public class ChangeP extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField newp;
     private javax.swing.JTextField oldp;
     // End of variables declaration//GEN-END:variables

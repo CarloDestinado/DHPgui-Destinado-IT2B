@@ -147,6 +147,11 @@ public class loginF extends javax.swing.JFrame {
                 checkMouseClicked(evt);
             }
         });
+        check.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkActionPerformed(evt);
+            }
+        });
         jPanel5.add(check);
         check.setBounds(0, 0, 70, 20);
 
@@ -290,6 +295,10 @@ public class loginF extends javax.swing.JFrame {
     private void pwMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_pwMouseClicked
+
+    private void checkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkActionPerformed
 
     /**
      * @param args the command line arguments

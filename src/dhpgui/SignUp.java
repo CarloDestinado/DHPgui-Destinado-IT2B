@@ -53,19 +53,24 @@ public class SignUp extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(400, 500));
 
         left.setPreferredSize(new java.awt.Dimension(400, 500));
+        left.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(51, 153, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("Sign Up");
+        left.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Username ");
+        left.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 139, -1, -1));
 
         user.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        left.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 136, 220, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("First Name ");
+        left.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 183, -1, -1));
 
         fname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         fname.addActionListener(new java.awt.event.ActionListener() {
@@ -73,26 +78,35 @@ public class SignUp extends javax.swing.JFrame {
                 fnameActionPerformed(evt);
             }
         });
+        left.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 180, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Last Name ");
+        left.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 227, -1, -1));
 
         lname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        left.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 224, 220, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Email");
+        left.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 269, -1, -1));
 
         email.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        left.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 263, 220, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Password");
+        left.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 305, -1, -1));
 
         password.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        left.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 302, 200, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setText("Re-Enter Password");
+        left.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 344, -1, -1));
 
         rpassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        left.add(rpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 341, 200, -1));
 
         jButton1.setForeground(new java.awt.Color(51, 153, 255));
         jButton1.setText("Sign up");
@@ -101,6 +115,7 @@ public class SignUp extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        left.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 418, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(51, 153, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -111,6 +126,7 @@ public class SignUp extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        left.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(288, 28, -1, 38));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PATIENT", "MEDICAL STAFF" }));
@@ -119,101 +135,11 @@ public class SignUp extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
+        left.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 374, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Type of User");
-
-        javax.swing.GroupLayout leftLayout = new javax.swing.GroupLayout(left);
-        left.setLayout(leftLayout);
-        leftLayout.setHorizontalGroup(
-            leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(leftLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(leftLayout.createSequentialGroup()
-                        .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(leftLayout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(leftLayout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(leftLayout.createSequentialGroup()
-                                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
-                                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(leftLayout.createSequentialGroup()
-                                        .addGap(7, 7, 7)
-                                        .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(leftLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(leftLayout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(82, Short.MAX_VALUE))
-                    .addGroup(leftLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(49, 49, 49))
-                    .addGroup(leftLayout.createSequentialGroup()
-                        .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
-                            .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(leftLayout.createSequentialGroup()
-                                    .addComponent(jLabel9)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(rpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(leftLayout.createSequentialGroup()
-                                    .addComponent(jLabel10)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 55, Short.MAX_VALUE))))
-        );
-        leftLayout.setVerticalGroup(
-            leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(leftLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(rpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addComponent(jButton1)
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
+        left.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 374, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -36,7 +36,7 @@ public class CreateUsersF extends javax.swing.JFrame {
        dbConnector dbc = new dbConnector();
         
         try{
-            String query = "SELECT * FROM tbl_user  WHERE u_username = '" + Un.getText() + "' OR u_email = '" + mail.getText() + "'";
+            String query = "SELECT * FROM users  WHERE u_username = '" + Un.getText() + "' OR u_email = '" + mail.getText() + "'";
             ResultSet resultSet = dbc.getData(query);
             
             if(resultSet.next()){
@@ -66,7 +66,7 @@ public class CreateUsersF extends javax.swing.JFrame {
        dbConnector dbc = new dbConnector();
         
         try{
-            String query = "SELECT * FROM tbl_user  WHERE (u_username = '" +Un.getText()+ "' OR u_email = '" +mail.getText()+ "') AND u_id != '"+id.getText()+"'";
+            String query = "SELECT * FROM users WHERE (u_username = '" +Un.getText()+ "' OR u_email = '" +mail.getText()+ "') AND u_id != '"+id.getText()+"'";
             ResultSet resultSet = dbc.getData(query);
             
             if(resultSet.next()){ 
@@ -144,9 +144,11 @@ public class CreateUsersF extends javax.swing.JFrame {
         check = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(0, 255, 255));
@@ -166,12 +168,17 @@ public class CreateUsersF extends javax.swing.JFrame {
                 addMouseClicked(evt);
             }
         });
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
         jPanel2.add(add);
         add.setBounds(10, 0, 90, 30);
         jPanel2.add(id);
         id.setBounds(220, 0, 190, 30);
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 420, 30));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 420, 30));
 
         jPanel3.setBackground(new java.awt.Color(0, 255, 255));
         jPanel3.setLayout(null);
@@ -201,7 +208,7 @@ public class CreateUsersF extends javax.swing.JFrame {
         jPanel3.add(fn);
         fn.setBounds(220, 0, 190, 30);
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 420, 30));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 420, 30));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(null);
@@ -232,7 +239,7 @@ public class CreateUsersF extends javax.swing.JFrame {
         jPanel4.add(ln);
         ln.setBounds(220, 0, 190, 30);
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 420, 30));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 420, 30));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(null);
@@ -256,7 +263,7 @@ public class CreateUsersF extends javax.swing.JFrame {
         jPanel5.add(mail);
         mail.setBounds(220, 0, 190, 30);
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 420, 30));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 420, 30));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
@@ -280,7 +287,7 @@ public class CreateUsersF extends javax.swing.JFrame {
         jPanel6.add(Un);
         Un.setBounds(220, 0, 190, 30);
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 420, 30));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 420, 30));
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(null);
@@ -309,12 +316,12 @@ public class CreateUsersF extends javax.swing.JFrame {
         jPanel7.add(pw);
         pw.setBounds(220, 0, 190, 30);
 
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 420, 30));
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 420, 30));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("USER LOAN");
+        jLabel1.setText("USER DIAGNOSIS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 330, 60));
 
         jPanel8.setBackground(new java.awt.Color(255, 204, 204));
@@ -390,7 +397,7 @@ public class CreateUsersF extends javax.swing.JFrame {
 
         }else{
             dbConnector dbc = new dbConnector();
-            dbc.updateData("UPDATE tbl_user SET u_fname ='"+fn.getText()+"', u_lname ='"+ln.getText()+"', u_email ='"+mail.getText()+"', u_username ='"+Un.getText()+"'");
+            dbc.updateData("UPDATE users SET u_fname ='"+fn.getText()+"', u_lname ='"+ln.getText()+"', u_email ='"+mail.getText()+"', u_username ='"+Un.getText()+"'");
 
             JOptionPane.showMessageDialog(null, "UPDATED SUCCESSFULLY!");
             userLoginF ads = new userLoginF();
@@ -421,7 +428,7 @@ public class CreateUsersF extends javax.swing.JFrame {
             try{
                 String pass = PassWordH.hashPassword(pw.getText());
 
-                if (dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_email, u_username, u_password, u_type, u_status)VALUES('"
+                if (dbc.insertData("INSERT INTO users (u_fname, u_lname, u_email, u_username, u_password, u_type, u_status)VALUES('"
                     + fn.getText() + "','"+ln.getText()+"','"+ mail.getText() + "','"
                     + Un.getText() + "','" + pass + "','"+ ut.getSelectedItem() + "','"+stat.getSelectedItem()+"')")){
 
@@ -461,6 +468,10 @@ public class CreateUsersF extends javax.swing.JFrame {
     private void lnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lnMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_lnMouseClicked
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addActionPerformed
     
     
     /**

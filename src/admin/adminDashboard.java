@@ -96,13 +96,12 @@ public class adminDashboard extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setText("USERS");
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 100, 40));
 
         jLabel9.setText(" ");
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\SCC6\\Desktop\\DHPgui-Destinado-IT2B\\src\\Icon\\icons8-users.png")); // NOI18N
         jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 150));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
@@ -143,11 +142,8 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\SCC6\\Desktop\\DHPgui-Destinado-IT2B\\src\\Icon\\icons8-nurse-100.png")); // NOI18N
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\SCC6\\Desktop\\DHPgui-Destinado-IT2B\\src\\Icon\\icons8-person-100.png")); // NOI18N
         jLabel6.setToolTipText("");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 120, 70));
 
